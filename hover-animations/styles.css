@@ -1,0 +1,60 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.button-group 
+{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  
+}
+
+.button-group > button
+{
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+.scale-button {
+    
+    border-radius: 5px;
+    transition-property: transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in;
+    transition-delay: 100ms;
+    background-color: oklch(70% 0.1258 235.06);
+    color: white;
+}
+
+.scale-button:hover 
+{
+   transform: scale(1.2);
+}
+
+.color-change-button 
+{
+
+    transition-duration: 100ms;
+    transition-property: background-color;
+    transition-timing-function: ease-in;
+    transition-delay: 150ms;
+    background-color: oklch(70% 0.1973 26.47);
+    color: white;
+    border-radius: 7px;
+    
+
+}
+
+.color-change-button:hover 
+{
+    background-color: oklch(67.65% 0.1875 240.35);
+}
+
