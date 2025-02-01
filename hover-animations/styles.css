@@ -12,6 +12,8 @@
   gap: 20px;
   padding: 20px;
   justify-content: center;
+  perspective: 10px;
+  transform-style: preserve-3d;
   
 }
 
@@ -58,3 +60,25 @@
     background-color: oklch(67.65% 0.1875 240.35);
 }
 
+.rotate-button {
+
+    transition: transform 0.3s ease-in-out;
+    transition-delay: 100ms;
+    transform: rotate(180deg);
+    
+}
+
+.rotate-button:hover{
+
+    transform: rotate(0deg);
+
+}
+
+.d-button {
+  transform: translateZ(-4%);
+  transition: transform 0.3s ease-in-out 0.4s;
+}
+
+.d-button:hover {
+    transform: translateZ(100%);
+}
