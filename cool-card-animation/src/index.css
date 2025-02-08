@@ -1,0 +1,131 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+
+}
+
+html, body, #root {
+
+  height: 100%;
+  
+}
+
+.wrapper {
+
+  height: 100%;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  padding-bottom: 100px;
+  gap: 20px;
+  
+  
+}
+
+.anime-box {
+  --height-increment: 1.4;
+  --translateY-increment: 13%;
+  height: 425px;
+  width: 350px;
+  box-shadow: 5px 10px 50px lightgrey;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-inline: 20px;
+  padding-block: 40px;
+  gap: 40px;
+  transition: 300ms ease-in-out;
+  transition-delay: 50ms;
+  transition-property: transform, height;
+  overflow: hidden;
+  cursor: pointer;
+
+  
+}
+
+.company-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.description {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.company-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 130px;
+}
+
+.hidden-div {
+
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-top: 20px;
+   transform: scale(0.5);
+   transition: transform 300ms ease;
+   transition-delay: 50ms;
+   
+   
+}
+
+.temp {
+
+    color: grey;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+
+.icon-line {
+
+  display: flex;
+  gap: 10px;
+}
+
+.learn-more-button {
+
+     background: black;
+     color: white;
+     padding-block: 10px;
+     border-radius: 8px;
+     height: 45px;
+     border: none;
+     font-size: 16px;
+     width: 98%;
+     align-self: center;
+     margin-top: 30px;
+}
+
+.anime-box:hover, .anime-box:focus-visible {
+
+    height: calc(450px * var(--height-increment));
+    transform: translateY(var(--translateY-increment));
+}
+
+.anime-box:hover .hidden-div, anime-box:focus-visible .hidden-div {
+
+    transform: scale(1);
+}
+
+.icono, .learn-more-button {
+   transition: transform 150ms ease;
+}
+
+.icono:hover {
+
+    transform: scale(1.5);
+}
+
+.learn-more-button:hover {
+
+  transform: scale(1.04);
+}
